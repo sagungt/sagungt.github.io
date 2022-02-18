@@ -114,3 +114,10 @@ document.querySelectorAll(".next").forEach((element) => {
     }
   });
 });
+
+setInterval(() => {
+  p1.plusSlides(1);
+  p2.plusSlides(1);
+  p3.plusSlides(1);
+  p4.plusSlides(1);
+}, 5000);

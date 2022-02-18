@@ -667,7 +667,7 @@ button:hover {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.9px);
   -webkit-backdrop-filter: blur(5.9px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
 }
 
 .show {
@@ -697,7 +697,7 @@ button:hover {
   flex-direction: row;
   flex-flow: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .project {
@@ -710,6 +710,9 @@ button:hover {
 .project img {
   width: 100%;
   border-radius: 4px;
+  object-fit: cover;
+  height: 300px;
+  cursor: pointer;
 }
 
 .project .info {
@@ -740,6 +743,7 @@ button:hover {
   border-radius: 20px;
   font-size: 12px;
   transition: 0.2s;
+  margin: 10px 4px;
 }
 
 .project .links a:hover {
@@ -850,6 +854,12 @@ button:hover {
   margin: 32px 0 0 0;
 }
 
+@media only screen and (max-width: 1024px) {
+  .project {
+    width: 48%;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .modal-content {
     width: 90%;
@@ -861,7 +871,7 @@ button:hover {
   }
 
   .project {
-    width: 100%;
+    width: 100% !important;
     margin: 10px 0;
   }
 }
