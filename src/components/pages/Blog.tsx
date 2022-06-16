@@ -4,8 +4,10 @@ const Blog = () => {
   return (
     <>
       <Container style={{ minHeight: "73vh" }}>
-        <Title>.posts</Title>
-        <Text>No articles yet...</Text>
+        <div style={{ padding: "0 10px" }}>
+          <Title>.posts</Title>
+          <Text>No articles yet...</Text>
+        </div>
       </Container>
       <Footer />
     </>
