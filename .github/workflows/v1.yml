@@ -30,8 +30,10 @@ jobs:
     - name: Deploy 🚀
       run: |
         cd dist
+        git config --global user.name "sagungt"
+        git config --global user.email "agungjordan.aj@gmail.com"
         git init
         git checkout -b main
         git add -A
-        git commit -m "Deploy 🚀"
+        git commit -m "Deploy 🚀 with Github Actions"
         git push -f git@github.com:sagungt/sagungt.github.io.git main
