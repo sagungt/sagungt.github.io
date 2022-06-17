@@ -6,10 +6,10 @@ name: sagungt.github.io v1
 on:
   workflow_dispatch:
   push:
-    branches: 'v1'
+    branches: [ "v1" ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -26,12 +26,12 @@ jobs:
       
     - name: Build 🧪
       run: npm run build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: List directory
-        run: ls -l
-        
-    
+      
+    - name: Deploy 🚀
+      run: |
+        cd dist
+        git init
+        git checkout -b main
+        git add -A
+        git commit -m "Deploy 🚀"
+        git push -f git@github.com:sagungt/sagungt.github.io.git main
